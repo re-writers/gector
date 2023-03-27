@@ -1,13 +1,12 @@
 import argparse
-import os
 from difflib import SequenceMatcher
 
 import Levenshtein
 import numpy as np
 from tqdm import tqdm
 
-from helpers import write_lines, read_parallel_lines, encode_verb_form, \
-    apply_reverse_transformation, SEQ_DELIMETERS, START_TOKEN
+from utils.helpers import write_lines, read_parallel_lines, encode_verb_form, apply_reverse_transformation, SEQ_DELIMETERS, \
+    START_TOKEN
 
 
 def perfect_align(t, T, insertions_allowed=0,
